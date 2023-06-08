@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b5abbfe78d.js" crossorigin="anonymous"></script>
+    <title>Task 2</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 204);
+            font-family: sans-serif;
+            margin: 15px;
+        }
+        h3 {
+            color: white;
+            background-color: green;
+            padding: 8px;
+        }
+        table, tr, td {
+            border: 1px solid black;
+        }
+        span {
+            color: red;
+            margin-left: 10px;
+            position: absolute;
+        }
+        span i{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; font-style: italic; letter-spacing:5px; text-align: center; color:blanchedalmond; background-color: rgb(153, 0, 0); margin-bottom: 0px; padding: 5px;">My first web page</h1>
+    <div height="10px" style="background-color: rgb(204, 0, 0); color: rgb(204, 0, 0)">Blank</div>
+
+    <h3>What this is</h3>
+    <p>Welcome to <i>my first webpage</i>. I created this webpage without the assistance of a webpage editor. Just my little text editor and a keen <i><b>UNDERSTANDING OF HTML.</b></i></p>
+
+    <h3>Why this is</h3>
+    <div style="color: darkred; font-style: italic;">
+        <ul>
+            <li>To learn HTML</li>
+            <li>List element</li>
+                <ol>
+                    <li>Home</li>
+                    <li>FAQ</li>
+                    <li>Contact</li>
+                    <li>About</li>
+                </ol>
+            <li>Here I have created ordered and unordered list</li>
+        </ul>
+    </div>
+
+    <h3>ZeusLearning.com</h3>
+    <a href="https://www.zeuslearning.com/" target="_blank" style="text-decoration: none;">This link will open zeuslearning.com in new tab</a>
+        
+    <h3>On click of following image navigate to Google.com</h3>
+    <a href="https://www.google.com/"><img src="google.png" alt="Google logo" height="80px" width="200px"></a>
+
+    <h2 style="color: gray;"> Some random table</h2>
+    <table style="background-color: lightgray;">
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 4, Cell 1</td>
+            <td>Row 4, Cell 2</td>
+            <td>Row 4, Cell 3</td>
+        </tr>
+    </table>
+
+    <h2 style="color: gray;">some random form</h2>
+    <p><i><b>Note:</b></i> It looks the part, but won't do anything</p>
+
+    <form action="#" method="get" target="_blank">
+        <label for="name">Name:</label><br><br>
+        <input type="text" id="name" onkeyup="validateName()" name="name" placeholder="Your name" required/>
+        <span id="name-error"></span><br><br>
+
+        <label for="comment">Comments:<span id="comm-error"></span></label><br><br> 
+        <textarea id="comment" name="comment" onkeyup="validateComm()" type="text"  style="overflow-y:scroll; resize: none;" rows="8" cols="30" placeholder="Your Comments" required></textarea><br>
+        
+        <p>Are you:<span id="gender-error"></span></p>
+        <input type="radio" name="gender" id="male" onclick="validateGender()" value="Male" required>
+        <label style="margin-right: 20px;" for="male">Male</label><br><br>
+        <input type="radio" name="gender" id="female" onclick="validateGender()" value="Female" required> 
+        <label for="female">Female</label><br><br>
+        
+        <button onclick="return validateForm()" type="submit">Submit Query</button> 
+        <span id="submit-error"></span>
+    </form> 
+
+    <script src="script.js"></script>
+
+</body>
+</html>
